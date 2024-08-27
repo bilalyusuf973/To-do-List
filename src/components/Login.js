@@ -49,7 +49,7 @@ const Login = (props) => {
         </div>
         <button type="submit" className="authButton">Login</button>
       </form>
-      <div className="credentials"><Link to="/forgotpassword" className='authLinks'>Forgot Password?</Link></div>
+      <div className="credentials"><Link to="" className='authLinks'>Forgot Password?</Link></div>
       <div className="credentials">Don't have an account?&nbsp;<Link to="/signup" className='authLinks'>SIGNUP</Link></div>
     </div>
   )

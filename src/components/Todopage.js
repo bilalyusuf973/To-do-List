@@ -67,7 +67,7 @@ const Todopage = (props) => {
           <div className='isCompleted'>
             <label htmlFor="">Status: </label>
             <div className="select" >
-              <select id="isCompleted" onChange={e => {handleChange(e.target.id, e.target.value)}} value={todo.completed}>
+              <select id="completed" onChange={e => {handleChange(e.target.id, e.target.value)}} value={todo.completed}>
                   <option value="true">Completed</option>
                   <option value="false">Pending</option>
               </select>

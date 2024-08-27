@@ -5,7 +5,6 @@ import TodoState from "./context/todos/TodoState";
 import { useState } from "react";
 import Todopage from "./components/Todopage";
 import FetchedTodos from "./components/FetchedTodos";
-import ForgotPass from "./components/ForgotPass";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
@@ -27,7 +26,6 @@ function App() {
             <Route path="/login" element={<Login showAlert={notify}/>}/>
             <Route path="/signup" element={<Signup showAlert={notify}/>}/>
             <Route path="/todos" element={<FetchedTodos setTodos={setTodo} showAlert={notify}/>} />
-            <Route path="/forgotpassword" element={<ForgotPass showAlert={notify}/>} />
           </Routes>
           <ToastContainer position="top-center" autoClose={600} hideProgressBar={false} newestOnTop={true} closeOnClick rtl={false} draggable theme="colored"/>
         </Router>
