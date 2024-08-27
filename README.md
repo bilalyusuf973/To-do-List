@@ -18,10 +18,13 @@ With To-do List, users can:
 ```bash
 git clone https://github.com/bilalyusuf973/To-do-List.git
 ```
-2. Install the dependencies:
+2. Install the frontend dependencies:
 ```bash
 cd To-do-List
 npm install
+```
+3. Install the backend dependencies:
+```bash
 cd backend
 npm install
 ```

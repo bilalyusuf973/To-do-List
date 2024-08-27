@@ -5,7 +5,7 @@ import TodoContext from '../context/todos/TodoContext';
 
 const Signup = (props) => {
   const { host } = useContext(TodoContext)
-  const [credentials, setCredentials] = useState({name: "", email: "", password: "", cpassword: ""});
+  const [credentials, setCredentials] = useState({fullname: "", email: "", password: "", cpassword: ""});
   const navigate = useNavigate();
 
   const handleSubmit = async (e)=>{
@@ -19,7 +19,7 @@ const Signup = (props) => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({name: credentials.name, email: credentials.email, password: credentials.password})
+          body: JSON.stringify({name: credentials.fullname, email: credentials.email, password: credentials.password})
       });
 
       const json = await response.json();
@@ -29,7 +29,7 @@ const Signup = (props) => {
         props.showAlert("success", "Account Created Successfully!");
         localStorage.setItem('token', json.authToken);
         localStorage.setItem('todolist_username', json.username);
-        navigate("/allTodos");
+        navigate("/todos");
       }
       else{
         props.showAlert("error", json.error);
@@ -46,7 +46,7 @@ const Signup = (props) => {
           <div className="divImage"><img className="authImage" src="/cloudNotesIcon.png" alt="icon" /></div>
         <h2 className="heading">Sign up</h2>
         <div className="mb-3">
-            <input type="text" className="form-control authForm" value={credentials.name} name="fullname" id="name" aria-describedby="fullname" onChange={handleChange} minLength={2} required placeholder='Full Name'/>
+            <input type="text" className="form-control authForm" value={credentials.name} name="fullname" id="fullname" aria-describedby="fullname" onChange={handleChange} minLength={2} required placeholder='Full Name'/>
         </div>
         <div className="mb-3">
             <input type="email" className="form-control authForm" value={credentials.email} name="email" id="email" aria-describedby="emailHelp" onChange={handleChange} required placeholder='Email address'/>
