@@ -20,7 +20,7 @@ git clone https://github.com/bilalyusuf973/To-do-List.git
 ```
 2. Install the dependencies:
 ```bash
-cd Cloudnotes
+cd To-do-List
 npm install
 cd backend
 npm install
